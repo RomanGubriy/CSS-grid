@@ -1,0 +1,44 @@
+html {
+height: 100%;
+}
+body {
+height: 100%;
+margin: 0;
+}
+.grid * {
+    background-color: bisque;
+    padding: 15 10;
+    border: 2px solid black ;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: brown;
+}
+.grid {
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "aside footer";
+}
+header {
+    grid-area: header;
+
+}
+aside {
+    grid-area: aside;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+}
+footer {
+ grid-area: footer;
+}
